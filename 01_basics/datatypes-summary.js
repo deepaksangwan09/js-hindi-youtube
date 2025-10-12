@@ -49,8 +49,36 @@ let myObj = {
 
 
 const myFunction = function(){
-     console.log( " Hello World " );
+     // console.log( " Hello World " );
 
 }
 
-console.log( typeof bigNumber);
+// console.log( typeof bigNumber);
+
+
+
+
+
+// ////     Stack(Primitive )- a copy is passed   and Heap ( Non- Primitive) - reference is passed
+////////     in stack any change in the copy will not affect the original value
+////////     in heap any change in the reference will affect the original value
+
+let myYoutubename = " hiteshchaudharydotcom ";
+let anotherName = myYoutubename;
+anotherName = " chaiaurcode ";
+
+console.log(myYoutubename); // hiteshchaudharydotcom
+console.log(anotherName); // chaiaurcode
+
+
+let userOne = {
+     email : "user@google.com",
+     upi : "user@ybl"
+}
+
+let userTwo = userOne; // reference is passed
+
+userTwo.email = " hitesh@google.com"  // change in the reference
+
+console.log(userOne.email); //  hitesh@google.com 
+console.log(userTwo.email); //  hitesh@google.com 
