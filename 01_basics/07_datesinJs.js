@@ -8,8 +8,30 @@ let myDate = new Date();
 // console.log(myDate.toLocaleString());  // 10/12/2023 format
 // console.log(myDate.toDateString());   // Thu Oct 12 2023 format
 
-console.log( typeof myDate );
+// console.log( typeof myDate );
                            //         in javascript months are 0 based like 0 to 11 not 1 to 12
 
-let myCreatedDate = new Date( 2025, 11 , 23);
-console.log( myCreatedDate.toDateString() );
+let myCreatedDate = new Date( "01-14-2023"); 
+// console.log( myCreatedDate.toDateString());
+// console.log(myCreatedDate.toLocaleDateString());
+
+
+let myTimeStamp = Date.now();
+// console.log(myTimeStamp);
+// console.log(myCreatedDate.getTime());
+
+// console.log(Math.floor(Date.now()/1000)); // time in seconds 
+
+let newDate = new Date();
+
+// console.log(newDate);
+// console.log(newDate.getMonth()+1); // month is 0 based , so add 1 to get current month
+// console.log(newDate.getDay());
+
+
+// locale string is an important method 
+
+newDate.toLocaleString( 'default',{
+    weekday : 'long'
+})
+console.log(newDate.toLocaleString());
